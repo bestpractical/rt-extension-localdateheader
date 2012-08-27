@@ -30,7 +30,7 @@ or add C<RT::Extension::LocalDateHeader> to your existing C<@Plugins> line.
 
 =item patch RT
 
-    patch /path/to/rt/share/html/Ticket/Element/ShowMessageHeaders < etc/callback_before_localization.diff
+    patch -d /opt/rt4 -p1 < etc/callback_before_localization.diff
 
 =item Clear your mason cache
 
