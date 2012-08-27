@@ -1,6 +1,6 @@
 NAME
-    RT-Extension-LocalDateHeader - [One line description of module's purpose
-    here]
+    RT-Extension-LocalDateHeader - Display local date for attachment Date
+    header
 
 INSTALLATION
     perl Makefile.PL
@@ -17,7 +17,7 @@ INSTALLATION
         line.
 
     patch RT
-            patch /path/to/rt/share/html/Ticket/Element/ShowMessageHeaders < etc/callback_before_localization.diff
+            patch -d /opt/rt4 -p1 < etc/callback_before_localization.diff
 
     Clear your mason cache
             rm -rf /opt/rt4/var/mason_data/obj
