@@ -1,6 +1,8 @@
 <%init>
 for my $header ( @$headers ) {
     if ( $header->{Tag} eq 'Date' && $header->{Value} ) {
+        $header->{Value} =~ s!^\s+!!;
+        $header->{Value} =~ s!\s+$!!;
         my $date = RT::Date->new($session{CurrentUser});
         $date->Set(
             Format   => 'unknown',
