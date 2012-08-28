@@ -10,7 +10,7 @@ for my $header ( @$headers ) {
             Timezone => 'UTC',
         );
 
-        if ( $date->Unix ) {
+        if ( $date->Unix && $header->{Value} ne $date->RFC2822(Timezone => 'user') ) {
             $header->{Value} = $date->RFC2822(Timezone => 'user') . qq! <span style="color:grey">($header->{Value})</span>!;
         }
     }
