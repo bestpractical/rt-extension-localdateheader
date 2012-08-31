@@ -30,6 +30,8 @@ or add C<RT::Extension::LocalDateHeader> to your existing C<@Plugins> line.
 
 =item patch RT
 
+If you are running RT 4.0.7 or earlier:
+
     patch -d /opt/rt4 -p1 < etc/callback_before_localization.diff
 
 =item Clear your mason cache
