@@ -2,6 +2,16 @@ NAME
     RT-Extension-LocalDateHeader - Display local date for attachment Date
     header
 
+DESCRIPTION
+    The Date: header included in emails received by RT will often be in the
+    sender's timezone (or possibly force to UTC by the remove mail server).
+    This extension will rewrite the Date: header to the user's timezone
+    while also displaying the original Date: next to it.
+
+VERSION
+    Compatible with RT 4.0 and 4.2. Versions earlier than 4.0.8 will need to
+    patch as instructed below. Untested on 3.8.
+
 INSTALLATION
     perl Makefile.PL
     make
@@ -9,7 +19,11 @@ INSTALLATION
         May need root permissions
 
     Edit your /opt/rt4/etc/RT_SiteConfig.pm
-        Add this line:
+        If you are using RT 4.2 or later, add this line:
+
+            Plugin('RT::Extension::LocalDateHeader');
+
+        For earlier releases of RT 4, add this line:
 
             Set(@Plugins, qw(RT::Extension::LocalDateHeader));
 
@@ -30,7 +44,7 @@ AUTHOR
     sunnavy <sunnavy@bestpractical.com>
 
 LICENSE AND COPYRIGHT
-    Copyright 2012 Best Practical Solutions, LLC.
+    Copyright 2012-2014 Best Practical Solutions, LLC.
 
     This is free software, licensed under:
 
