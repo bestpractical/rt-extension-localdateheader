@@ -1,4 +1,5 @@
 etc/callback_before_localization.diff
+html/Callbacks/LocalDateHeader/Elements/ShowMessageHeaders/BeforeLocalization
 html/Callbacks/LocalDateHeader/Ticket/Elements/ShowMessageHeaders/BeforeLocalization
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
