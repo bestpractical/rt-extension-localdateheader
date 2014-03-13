@@ -19,6 +19,8 @@ timezone but the Date header looks totally different. Most non-
 technical users don't know how to interpret the -0000 or -0400
 syntax of mail Date: headers.
 
+=for html <p><img src="https://raw.github.com/bestpractical/rt-extension-localdateheader/master/doc/images/extension.png" alt="History Preview in Search Results" /></p>
+
 =head1 VERSION
 
 Compatible with RT 4.0 and 4.2.  Versions earlier than 4.0.8 will need to
