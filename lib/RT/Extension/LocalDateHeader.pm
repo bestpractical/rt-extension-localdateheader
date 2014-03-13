@@ -11,9 +11,13 @@ RT-Extension-LocalDateHeader - Display local date for attachment Date header
 =head1 DESCRIPTION
 
 The Date: header included in emails received by RT will often be in the
-sender's timezone (or possibly force to UTC by the remove mail server).
+sender's timezone (or possibly forced to UTC by the remote mail server).
 This extension will rewrite the Date: header to the user's timezone
-while also displaying the original Date: next to it.
+while also displaying the original Date: next to it. This reduces
+confusion when RT lists "Correspondence added" in the user's
+timezone but the Date header looks totally different. Most non-
+technical users don't know how to interpret the -0000 or -0400
+syntax of mail Date: headers.
 
 =head1 VERSION
 
