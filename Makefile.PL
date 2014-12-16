@@ -1,10 +1,8 @@
 use inc::Module::Install;
 
-
 RTx 'RT-Extension-LocalDateHeader';
-all_from 'lib/RT/Extension/LocalDateHeader.pm';
-readme_from 'lib/RT/Extension/LocalDateHeader.pm';
-license  'gplv2';
+
+repository('https://github.com/bestpractical/rt-extension-localdateheader');
 
 requires_rt '4.0.8';
 
