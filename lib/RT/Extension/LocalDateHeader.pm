@@ -23,8 +23,7 @@ syntax of mail Date: headers.
 
 =head1 VERSION
 
-Compatible with RT 4.0 and 4.2.  Versions earlier than 4.0.8 will need to
-patch as instructed below.  Untested on 3.8.
+Compatible with RT 4.0 and 4.2.
 
 =head1 INSTALLATION 
 
@@ -49,12 +48,6 @@ For earlier releases of RT 4, add this line:
     Set(@Plugins, qw(RT::Extension::LocalDateHeader));
 
 or add C<RT::Extension::LocalDateHeader> to your existing C<@Plugins> line.
-
-=item patch RT
-
-If you are running RT 4.0.7 or earlier:
-
-    patch -d /opt/rt4 -p1 < etc/callback_before_localization.diff
 
 =item Clear your mason cache
 
